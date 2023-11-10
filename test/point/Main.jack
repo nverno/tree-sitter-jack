@@ -1,0 +1,23 @@
+class Main {
+  function void main() {
+    var Point p1, p2, p3;
+    var int x, y, z;
+    let p1 = Point.new(1,2);
+    let p2 = Point.new(3,4);
+    let p3 = p1.plus(p2);
+
+    /** standard library functions */
+    do Output.printString("p1 + p2 = ");
+    do p3.print();
+    do Output.println(); // new line
+    do Output.printInt(p1.distance(p3));
+
+    let x = 2;
+    let y = 3;
+    let z = 4;
+    do Output.println(x * y / z < z * x / y);
+
+    let x = w(o.oo.p_1(1, o._p2())*y);
+    return;
+  }
+}

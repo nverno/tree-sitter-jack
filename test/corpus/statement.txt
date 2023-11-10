@@ -1,0 +1,74 @@
+==================
+If statement
+==================
+
+class Main {
+  function int f() {
+    if (true) {}
+  }
+}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body
+      (subroutine_declaration
+        (type)
+        (identifier)
+        (formal_parameters)
+        (subroutine_body
+          (if_statement
+            (parenthesized_expression
+              (true))
+            (statement_block)))))))
+
+==================
+While statement
+==================
+
+class Main {
+  function void f() {
+    var int x;
+    while (x > 0) {
+      let x = x - 1;
+    }
+    do Output.printString("x = ");
+    return;
+  }
+}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body
+      (subroutine_declaration
+        (type)
+        (identifier)
+        (formal_parameters)
+        (subroutine_body
+          (local_variable_declaration
+            (type)
+            (identifier))
+          (while_statement
+            (parenthesized_expression
+              (binary_expression
+                (identifier)
+                (integer)))
+            (statement_block
+              (let_statement
+                (identifier)
+                (binary_expression
+                  (identifier)
+                  (integer)))))
+          (do_statement
+            (call_expression
+              (member_expression
+                (identifier)
+                (identifier))
+              (arguments
+                (string))))
+          (return_statement))))))

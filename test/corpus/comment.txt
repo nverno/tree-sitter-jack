@@ -1,0 +1,51 @@
+====================================
+Top level comment
+====================================
+
+// Hello
+
+
+------------------------------------
+
+(source_file
+  (comment))
+
+====================================
+Single-line comments
+====================================
+
+class Main { // eol
+    // Hello
+}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body
+      (comment)
+      (comment))))
+
+====================================
+Doc comments
+====================================
+
+/** Main class
+ *  yadada
+ */
+class Main /** docs */ {
+  /**
+   * Hello
+   */
+}
+
+------------------------------------
+
+(source_file
+  (doc_comment)
+  (class_declaration
+    (identifier)
+    (doc_comment)
+    (class_body
+      (doc_comment))))

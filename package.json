@@ -1,0 +1,50 @@
+{
+  "name": "@nverno/tree-sitter-jack",
+  "version": "1.0.0",
+  "description": "Jack (nand2tetris) grammar for tree-sitter",
+  "keywords": [
+    "parser",
+    "lexer",
+    "nand2tetris",
+    "jack"
+  ],
+  "homepage": "https://github.com/nverno/tree-sitter-jack#readme",
+  "bugs": {
+    "url": "https://github.com/nverno/tree-sitter-jack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nverno/tree-sitter-jack.git"
+  },
+  "license": "GPL-3.0-or-later",
+  "author": "Noah Peart <noah.v.peart@gmail.com> (https://www.github.com/nverno)",
+  "main": "bindings/node",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "build": "tree-sitter generate",
+    "build:native": "tree-sitter generate && node-gyp build",
+    "build:wasm": "tree-sitter build-wasm",
+    "install": "node-gyp rebuild",
+    "parse": "tree-sitter parse",
+    "test": "tree-sitter test",
+    "web": "npm run build:wasm && npx tree-sitter web-ui"
+  },
+  "dependencies": {
+    "nan": "^2.18.0"
+  },
+  "devDependencies": {
+    "node-gyp": "^10.0.1",
+    "tree-sitter-cli": "^0.20.8"
+  },
+  "gypfile": true,
+  "tree-sitter": [
+    {
+      "scope": "source.jack",
+      "file-types": [
+        "jack"
+      ]
+    }
+  ]
+}

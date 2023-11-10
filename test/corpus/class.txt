@@ -1,0 +1,35 @@
+==================
+Empty class
+==================
+
+class Main {}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body)))
+
+==================
+Class variables
+==================
+
+class Main {
+  field int x;
+  static String s;
+}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body
+      (class_variable_declaration
+        (type)
+        (identifier))
+      (class_variable_declaration
+        (type
+          (class_name))
+        (identifier)))))

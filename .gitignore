@@ -1,0 +1,9 @@
+*.so
+*.o
+tmp*
+.log/
+node_modules/
+build/
+package-lock.json
+tree-sitter-*
+example.txt

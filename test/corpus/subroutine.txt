@@ -1,0 +1,70 @@
+==================
+Constructor
+==================
+
+class Boid {
+  field int x, y;
+  constructor Boid new(int sx, int sy) {}
+}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body
+      (class_variable_declaration
+        (type)
+        (identifier)
+        (identifier))
+      (subroutine_declaration
+        (type
+          (class_name))
+        (identifier)
+        (formal_parameters
+          (parameter
+            (type)
+            (identifier))
+          (parameter
+            (type)
+            (identifier)))
+        (subroutine_body)))))
+
+==================
+Local variables
+==================
+
+class Boid {
+  method int f() {
+    var int x, y;
+    let y = 1;
+    let x = 2;
+    return x + y;
+  }
+}
+
+------------------------------------
+
+(source_file
+  (class_declaration
+    (identifier)
+    (class_body
+      (subroutine_declaration
+        (type)
+        (identifier)
+        (formal_parameters)
+        (subroutine_body
+          (local_variable_declaration
+            (type)
+            (identifier)
+            (identifier))
+          (let_statement
+            (identifier)
+            (integer))
+          (let_statement
+            (identifier)
+            (integer))
+          (return_statement
+            (binary_expression
+              (identifier)
+              (identifier))))))))

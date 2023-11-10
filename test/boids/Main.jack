@@ -1,0 +1,8 @@
+class Main {
+  function void main() {
+    var Boid boid;
+    do boid.draw();
+    do boid.dispose();
+    return;
+  }
+}
